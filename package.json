@@ -1,0 +1,16 @@
+{
+  "name": "start-meeting",
+  "version": "1.0.0",
+  "description": "Alano Club Zoom meeting kiosk",
+  "main": "main.js",
+  "repository": "https://github.com/mikecebul/start-meeting",
+  "author": "Mike Cebulski",
+  "license": "MIT",
+  "private": false,
+    "scripts": {
+      "start": "electron ."
+    },
+  "devDependencies": {
+    "electron": "^26.2.2"
+  }
+}
