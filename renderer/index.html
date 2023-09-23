@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Serenity House</title>
+    <link rel="stylesheet" type="text/css" href="output.css" />
+  </head>
+  <body
+    class="bg-slate-900 text-slate-50 flex justify-center items-center flex-col h-[100dvh]"
+  >
+    <main>
+      <p class="text-center">Welcome to the</p>
+      <h1 class="text-center text-5xl">Serenity House</h1>
+      <div class="pt-32 flex justify-center">
+        <button
+          id="startZoom"
+          class="text-center px-6 py-2 bg-orange-600 text-black font-semibold rounded-lg text-xl hover:shadow-xl shadow-lg hover:bg-orange-500 transition duration-200 ease-in-out focus:outline-none focus:border-orange-700 focus:ring focus:ring-orange-200 focus:ring-opacity-50 tracking-wide"
+        >
+          Start Hybrid Meeting
+        </button>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
