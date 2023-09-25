@@ -2,7 +2,7 @@ const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("node:path");
 const axios = require("axios");
 const open = require("better-opn");
-require("dotenv").config();
+const fs = require("fs");
 
 const isMac = process.platform === "darwin";
 
@@ -67,6 +67,10 @@ async function getZoomToken() {
     }
   } catch (error) {
     console.error("Error fetching data:", error);
+    fs.writeFileSync(
+      "/home/mike/Documents/error-logs/start-meeting-error-log.txt",
+      `Axios Error during getZoomToken: ${error}\n`
+    );
     return undefined;
   }
 }
@@ -91,5 +95,9 @@ async function startZoomMeeting(token) {
     }
   } catch (error) {
     console.error("Error starting the meeting:", error);
+    fs.writeFileSync(
+      "/home/mike/Documents/error-logs/start-meeting-error-log.txt",
+      `Caught exception in startZoomMeeting: ${error}\n`
+    );
   }
 }
